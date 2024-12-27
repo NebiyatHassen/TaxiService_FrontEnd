@@ -1,0 +1,537 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  width: 450px;
+  background: #1e1e1e;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  height: 90%;
+}
+
+.card-header {
+  position: relative;
+  height: 200px;
+  background-image: url("./assets/taxi_service.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.card-header img {
+  position: absolute;
+  bottom: -80px;
+  right: 20px;
+  width: 140px;
+  height: 140px;
+  border-radius: 20px;
+  border: 1px solid #fff;
+}
+
+.card-content {
+  padding: 20px;
+  max-height: calc(100vh - 220px);
+  overflow-y: auto;
+}
+
+.card-content h1 {
+  font-size: 30px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.card-content h2 {
+  font-size: 18px;
+  color: #ffd700;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.card-content p {
+  color: #fff;
+  text-align: left;
+  margin-bottom: 15px;
+  line-height: 1.8;
+  word-spacing: 2px;
+  letter-spacing: 0.5px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: left;
+  gap: 40px;
+  margin: 25px 0;
+  padding-left: 8px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffa500;
+}
+
+.contact-header {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 1.8;
+  gap: 25px;
+}
+
+.contact div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact span {
+  display: block;
+}
+
+.contact span i {
+  display: block;
+  color: #ffa500;
+  margin-bottom: 25px;
+}
+
+.contact span .text {
+  display: block;
+  color: #fff;
+}
+.gallery-section,
+.services-section {
+  margin-top: 20px;
+}
+
+.gallery-header,
+.services-header {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 26px;
+
+  text-align: left;
+}
+
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 125px;
+  height: 150px;
+  border-radius: 10px;
+  justify-content: space-between;
+  object-fit: cover;
+}
+
+.services-section,
+.appointment-section,
+.products-section {
+  border-radius: 10px;
+
+  padding: 0px;
+  margin-bottom: 30px;
+}
+
+.services-header,
+.appointment-header,
+.products-header {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service-card {
+  background: #2a2a2a;
+  border-style: dashed;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.service-card i {
+  font-size: 40px;
+  color: #ffa500;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.appointment {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.appointment label {
+  font-size: 16px;
+  color: #333;
+}
+
+.appointment input[type="date"] {
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.hour-selection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Change to two buttons per row */
+  gap: 10px;
+}
+
+.hour-selection button {
+  background: #2a2a2a;
+  color: #ffa500;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.appointment-btn {
+  background: #ffa500;
+  color: #000;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+  flex: 1 1 45%;
+}
+
+.product-card img {
+  width: 60px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.product-info {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.product-info h4 {
+  font-size: 16px;
+}
+
+.product-info p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.product-price {
+  font-size: 18px;
+  color: #ffa500;
+  font-weight: bold;
+}
+
+section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.testimonial {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.testimonial h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.testimonial-content {
+  position: relative;
+  background-image: url(./assets/taxiiiiiiiiiiii.jpg);
+  padding: 0px;
+  display: inline-block;
+}
+
+.testimonial-content p {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.testimonial-content img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.testimonial-content .name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #ffd700;
+}
+
+.testimonial-content .arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.arrows span {
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+}
+
+.business-hours {
+  text-align: center;
+}
+
+.business-hours h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.hours-table {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  justify-content: center;
+}
+
+.hours-table div {
+  background-image: url(./assets/aphat.jpg);
+  padding: 15px;
+  font-size: 16px;
+}
+
+.blog-section {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.blog-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.blog-container {
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.blog-container img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.blog-content {
+  text-align: left;
+}
+
+.blog-content h3 {
+  font-size: 20px;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.blog-content p {
+  font-size: 16px;
+}
+.qr-code {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.qr-code h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.qr-code-container {
+  background: #333;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+}
+
+.qr-code-container img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 15px;
+}
+
+.qr-code-container .download-btn {
+  background-color: #ffd700;
+  color: #000;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #373738;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+  border-color: #373738;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  background-color: #373738;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+button {
+  background-color: #ffd700;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Basic responsive adjustments */
+@media (max-width: 600px) {
+  .hours-grid {
+    grid-template-columns: 1fr; /* Stack on smaller screens */
+  }
+}
